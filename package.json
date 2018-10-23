@@ -1,0 +1,11 @@
+{
+    "name": "f-errorhander",
+    "version": "2.0.2",
+    "description": "error hander",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "hzq",
+    "license": "ISC"
+}
