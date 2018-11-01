@@ -89,8 +89,8 @@ const apiErrorHandler = error => {
 };
 // 【code、api】异常收集处理函数
 const errorHandler = (e, t) => {
+    console.error(e);
     if (isIgnore) {
-        console.error(e);
         if (isIgnore !== 'send') return;
     }
     let AgentInfo = _AgentInfo._init();
@@ -384,7 +384,8 @@ const install = (Vue, flag) => {
             }
         }
     });
+    window.apiErrorHandler = apiErrorHandler;
+    window.errorHandler = errorHandler;
 };
-window.apiErrorHandler = apiErrorHandler;
-window.errorHandler = errorHandler;
+
 export default { install };
